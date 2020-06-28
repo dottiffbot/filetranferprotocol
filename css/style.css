@@ -1,0 +1,81 @@
+
+@keyframes background{
+  /* 0 % {background-image:repeating-radial-gradient(red, yellow 10%);}
+   25% {background-image:repeating-radial-gradient(red, yellow 10% red 10%);}
+   50% {background-image:repeating-radial-gradient(red,yellow 10%, blue 15%, red 20%);}
+   75% {background-image:repeating-radial-gradient(red,yellow 10%,blue 15%, red 20%, yellow 25%);}
+   100% {background-image:repeating-radial-gradient(red, yellow 10%, blue 15%, red 20% yellow 25%, blue 30%);}*/
+from {background-image:repeating-radial-gradient(red, yellow 10%);}
+to {background-image:repeating-radial-gradient(red,yellow 10%,blue 15%, red 20%);}
+   
+}
+
+@keyframes ticker {
+    from {left: 1000px;}
+    to {left: 0px;}
+}
+
+@keyframes ticker-two {
+    from {
+        /*transform: translateX(-100%);*/
+        right: 1000px;
+    }
+    to {
+        /*transform: translateX(-200%);*/
+        right: 0px;
+    }
+}
+
+html{
+    cursor: pointer;
+}
+
+body{
+  /*background-image: linear-gradient(to right, red , yellow); */
+  background-image:repeating-radial-gradient(red, yellow 10%);
+  animation: background 10s linear infinite;
+
+
+}
+
+.banner {
+    background-color: transparent;
+    margin-top: 50px;
+    font-family: Pixtur; 
+    font-size: 29.5px;
+    text-shadow: 0 0 3px #FF0000;
+    display: inline-block;
+    padding: 0;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    position: relative;
+    animation: ticker 25s linear infinite;
+  
+}
+
+.car {
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 40%
+height:10%;
+position: fixed;
+
+
+}
+
+
+.footer{
+    background-color: transparent;
+    margin-top: 500px;
+    font-family: Pixtur;
+    font-size: 29.5px;
+    text-shadow: 0 0 3px #FF0000;
+    text-align: center; 
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    position: relative;
+   animation: ticker-two 25s linear infinite;
+}
