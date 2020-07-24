@@ -23,16 +23,19 @@ body {
   background-size: cover;
 }
 
+.invisibox{
+  max-width: 100%;
+  background-color: transparent;
+  overflow: hidden;
+}
+
 
 .banner, .footer{
-    background-color: transparent;
+    background-color:transparent;
     display: inline-block;
     white-space: nowrap;
     overflow: hidden;
     position:relative;
-    max-width: 1200px;
-    max-height: 700px;
-
 }
 
 .head{
@@ -40,7 +43,7 @@ body {
 }
 
 .foot{
-margin-bottom: 30px;
+  margin-bottom: 30px;
 }
 
 .text{
@@ -62,17 +65,22 @@ margin-bottom: 30px;
   animation: ticker-two 30s linear infinite;
 }
 
-.car {
-max-width:1000px;
-height: 600px;
+.main-container {
+max-width: 100%;
 overflow: hidden;
 position: relative;
+background-color: transparent;
 cursor: url("https://gamepedia.cursecdn.com/fallout_gamepedia/9/97/Fo1_Molotov_Cocktail.png?version=6d50619be0e85dcf9751a51bc152b1d8"), auto;
+}
 
+.car{
+overflow: hidden;
+position: relative;
 }
 
 .car img{
 display:block;
 margin-left: auto;
 margin-right: auto;
+
 }
