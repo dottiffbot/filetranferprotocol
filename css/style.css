@@ -1,78 +1,78 @@
-@keyframes background{
-  /* 0 % {background-image:repeating-radial-gradient(red, yellow 10%);}
-   25% {background-image:repeating-radial-gradient(red, yellow 10% red 10%);}
-   50% {background-image:repeating-radial-gradient(red,yellow 10%, blue 15%, red 20%);}
-   75% {background-image:repeating-radial-gradient(red,yellow 10%,blue 15%, red 20%, yellow 25%);}
-   100% {background-image:repeating-radial-gradient(red, yellow 10%, blue 15%, red 20% yellow 25%, blue 30%);}*/
+@keyframes bggradient{
 from {background-image:repeating-radial-gradient(red, yellow 10%);}
 to {background-image:repeating-radial-gradient(red,yellow 10%,blue 15%, red 20%);}
    
 }
 
 @keyframes ticker {
-    from {left: 100%;}
-    to {left: 0%;}
+ from {right:0%;}
+    to {right:100%;}
 }
 
 @keyframes ticker-two {
-    from {
-        /*transform: translateX(-100%);*/
-        right: 100%
-    }
-    to {
-        /*transform: translateX(-200%);*/
-        right: 0%;
-    }
-}
+    from {right: 100%;}
+    to {right: 0%;}
+   }
 
-
-body{
-  /*background-image: linear-gradient(to right, red , yellow); */
+body {
+  font-size: 10px;
   background-image:repeating-radial-gradient(red, yellow 10%);
-  animation: background 10s linear infinite;
-
-
+  animation: bggradient 10s linear infinite;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
-.banner {
+
+.banner, .footer{
     background-color: transparent;
-    margin-top: 50px;
-    font-family: Pixtur; 
-    font-size: 29.5px;
-    text-shadow: 0 0 3px #FF0000;
     display: inline-block;
-    padding: 0;
-    width: 100%;
     white-space: nowrap;
     overflow: hidden;
-    position: relative;
-    animation: ticker 25s linear infinite;
-  
+    position:relative;
+    max-width: 1200px;
+    max-height: 700px;
+
+}
+
+.head{
+  margin-top: 30px;
+}
+
+.foot{
+margin-bottom: 30px;
+}
+
+.text{
+  font-family: Pixtur; 
+  font-size: 2.2rem;
+  text-shadow: 0 0 3px #FF0000;
+
+}
+
+#ticker {
+  width: 100%
+  height: auto;
+  animation: ticker 30s linear infinite;
+}
+
+#ticker-two{
+  width: 100%
+  height: auto;
+  animation: ticker-two 30s linear infinite;
 }
 
 .car {
-display: block;
-margin-left: auto;
-margin-right: auto;
-right: 100px;
-width: 20%
-height:100%;
-position: fixed;
+max-width:1000px;
+height: 600px;
+overflow: hidden;
+position: relative;
 cursor: url("https://gamepedia.cursecdn.com/fallout_gamepedia/9/97/Fo1_Molotov_Cocktail.png?version=6d50619be0e85dcf9751a51bc152b1d8"), auto;
 
 }
 
-
-.footer{
-    background-color: transparent;
-    margin-top: 500px;
-    font-family: Pixtur;
-    font-size: 29.5px;
-    text-shadow: 0 0 3px #FF0000;
-    text-align: center; 
-    width: 100%;
-    white-space: nowrap;
-    overflow: hidden;
-    position: relative;
-   animation: ticker-two 25s linear infinite;
+.car img{
+display:block;
+margin-left: auto;
+margin-right: auto;
 }
