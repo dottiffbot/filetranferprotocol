@@ -17,6 +17,16 @@
   src: url("./assets/fonts/Messapia-Bold.otf");
 }
 
+/* latin */
+@font-face {
+  font-family: 'UnifrakturMaguntia';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('UnifrakturMaguntia'), url(https://fonts.gstatic.com/s/unifrakturmaguntia/v11/WWXPlieVYwiGNomYU-ciRLRvEmK7oaVemGZMFABK1Q.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
 
 
 
@@ -44,18 +54,19 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  /*overflow: hidden;*/
+  max-width: 100%;
+  overflow: hidden;
+
 }
 
 .invisibox{
   max-width: 100%;
-  background-color: transparent;
+  height: auto;
   overflow: hidden;
 }
 
 
 .banner, .footer{
-    background-color:transparent;
     display: inline-block;
     white-space: nowrap;
     overflow: hidden;
@@ -63,52 +74,48 @@ body {
 }
 
 .head{
-  margin-top: 30px;
+  margin-top: 2%;
 }
 
 .foot{
-  margin-bottom: 30px;
+margin-top: 2%;
+margin-bottom: 5%;
 }
 
 .text{
-  font-family:Pixtur; 
+  font-family:Pixtur, UnifrakturMaguntia; 
   font-size: 2.2rem;
   text-shadow: 0 0 3px #FF0000;
 
 }
 
 li{
-  /*border:solid blue;*/
-  border-radius: 100%;
   text-align: center;
-  padding: 50px;
-  margin-bottom: 10px;
-  /*background-color: yellow;*/
-
+  padding: 40px;
 }
 
 ul{
   list-style: none;
-  margin:10px;
   padding: 0;
-  width: 200px;
+  max-width: 200px;
 }
 
 .nav-wrap{
   max-width: 20%;
-  background-color:transparent;
   float: right;
-  margin-top: 4%;
-  margin-right: 20px;
-  clear:both;
+  margin-right: 30px;
+  clear: both;
+  overflow: auto;
 }
 
+
+
  .nav{
-  font-family: Pixtur; 
+  font-family: Pixtur, UnifrakturMaguntia; 
   font-size:1.5rem;
   color:#75B6FF;
   text-shadow: 0 0 1em blue, 0 0 0.2em blue;
-  position: sticky;
+  position: relative;
   z-index: 10px;
 }
 
@@ -147,21 +154,22 @@ ul{
 
 .main-container {
 max-width: 100%;
+height: auto;
 overflow: hidden;
 display: block;
 position: relative;
-background-color:transparent;
 cursor: url("https://gamepedia.cursecdn.com/fallout_gamepedia/9/97/Fo1_Molotov_Cocktail.png?version=6d50619be0e85dcf9751a51bc152b1d8"), auto;
 }
 
 .car{
 box-sizing: border-box; 
 overflow: hidden;
-position: relative;
 background-color:transparent;
 max-width: 60%;
-max-height:5%;
+height:auto;
 margin: 2% 20%;
+position: relative;
+
 }
 
 .car img{
@@ -169,26 +177,25 @@ max-width: 100%;
 display:block;
 margin-left: auto;
 margin-right: auto;
+height: auto;
 }
 
 .wire{
 overflow: hidden;
+display: inline-block;
 position: absolute;
-background-color:transparent;
-max-width: 15%;
+max-width:15%;
 bottom: 20px;
 right: 80px;
-
 
 }
 
 .wire2{
 overflow: hidden;
+display: inline-block;
 position: absolute;
-background-color:transparent;
 max-width: 15%;
 bottom: 20px;
-float: left;
 left: 80px;
 
 }
@@ -200,13 +207,18 @@ margin-left: auto;
 margin-right: auto;
 
 }
+
+.wire2 img{
+max-width: 100%;
+display: block;
+margin-left: auto;
+margin-right: auto;
+
+}
+
 h1{
   font-family: 'Druk Wide', Messapia, sans-serif;
   line-height: 1.2;
- /* background-image: linear-gradient(to left, yellow, orange, red);   
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;*/
-  text-align: center;
   text-shadow: 2px 2px 5px red;
 
 }
@@ -221,16 +233,18 @@ p {
 }
 
 .modal{
-  display: none; 
-  position: fixed; 
+  display:none;
+  position:absolute;
+  overflow: auto;
   z-index: 5; 
-  padding-top: 25px; /* Location of the box */
-  right: 310px;
-  top: 150px;
-  width: 50%; 
-  height: 50%; 
-  overflow: scroll;
-  margin-left: 25px;
+  padding-top: 2%; /* Location of the box */
+  /*right: 310px;
+  top: 150px;*/
+  max-width:50%;
+  max-height:60%;
+  overflow:scroll;
+  margin-left: 25%;
+  margin-top: 7%;
   border-radius: 20px;
   background-color:rgba(0,0,0); /* Fallback color */
  background-color: rgba(0,0,0,0.4);
@@ -244,21 +258,22 @@ p {
   font-size: 1rem;
   line-height: 2;
   text-shadow:1px,1px, white;
+  overflow: auto;
 }
 
 #resourcePadBasic{
   margin-top: 2px;
   margin-left: 5px;
   margin-right: 5px;
-  width: 100%
-  height: 90%;
+  max-width: 100%
+  max-height: 90%;
 }
 
 .readingGroup{
   background-color: rgba(254,251,251,0.7);
   margin: auto;
   padding:30px;
-  width: 80%;
+  max-width: 80%;
   font-family: 'Neue Machina';
   font-size: 1rem;
   line-height: 2;
@@ -282,11 +297,67 @@ p {
   text-decoration: none;
   cursor: pointer;
 }
-}
 
-@media only screen and (max-width: 480px){
- .text{
-  font-size:1.5rem;
- }
+@media screen and (max-width: 570px){
+  .car{
+    margin: 50% 20%;
   }
+  .nav{
+    font-size:0.5rem;
+  }
+
+  .nav-wrap{
+    margin-top: 30%;
+    margin-right:3%;
+  }
+
+  ul{
+  margin:50% 2%;
+
+  }
+
+  li{
+    margin:1px;
+    padding: 10px;
+  }
+  
+
+  .wire{
+    right:20px;
+    bottom:0;
+    margin-bottom:50%
+  }
+
+  .wire2{
+    left:20px;
+    bottom: 0;
+    margin-bottom:50%;
+  }
+
+  .wire img{
+    max-width: 50%;
+    height:auto;
+  }
+
+  .wire2 img{
+    max-width: 50%;
+    height:auto;
+  }
+  .text{
+    font-size:1rem;
+  }
+
+    .modal{
+    margin-top:15%;
+  }
+
+  .modal-content{
+    font-size: 0.8rem;
+  }
+
+  .readingGroup{
+    font-size: 0.8rem;
+  }
+
 }
+ 
