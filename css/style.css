@@ -28,8 +28,6 @@
 }
 
 
-
-
 @keyframes bggradient{
 from {background-image:repeating-radial-gradient(red, yellow 10%);}
 to {background-image:repeating-radial-gradient(red,yellow 10%,blue 15%, red 20%);}
@@ -47,6 +45,11 @@ to {background-image:repeating-radial-gradient(red,yellow 10%,blue 15%, red 20%)
    }
 
 
+html{
+height: 100%;
+}
+
+
 body {
   font-size: 10px;
   background-image:repeating-radial-gradient(red, yellow 10%);
@@ -54,9 +57,8 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  max-width: 100%;
-  overflow: hidden;
-
+  min-height: 100%
+  padding: 0;
 }
 
 .invisibox{
@@ -73,14 +75,6 @@ body {
     position:relative;
 }
 
-.head{
-  margin-top: 2%;
-}
-
-.foot{
-margin-top: 2%;
-margin-bottom: 5%;
-}
 
 .text{
   font-family:Pixtur, UnifrakturMaguntia; 
@@ -107,7 +101,6 @@ ul{
   clear: both;
   overflow: auto;
 }
-
 
 
  .nav{
@@ -154,10 +147,10 @@ ul{
 
 .main-container {
 max-width: 100%;
-height: auto;
+padding: 2% 0;
 overflow: hidden;
 display: block;
-position: relative;
+position:relative;
 cursor: url("https://gamepedia.cursecdn.com/fallout_gamepedia/9/97/Fo1_Molotov_Cocktail.png?version=6d50619be0e85dcf9751a51bc152b1d8"), auto;
 }
 
