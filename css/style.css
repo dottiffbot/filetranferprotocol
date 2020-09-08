@@ -1,3 +1,5 @@
+   /* fonts */
+
    @font-face{
     font-family: Pixtur;
     src: url("./ assets/fonts/Pixtur.otf");
@@ -27,6 +29,15 @@
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
+*,
+*::before,
+*::after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
 @keyframes bggradient{
 from {background-image:repeating-radial-gradient(red, yellow 10%);}
@@ -57,9 +68,14 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  min-height: 100%
+  min-height: 100%;
+  min-width: 100%;
+  overflow: hidden;
   padding: 0;
 }
+
+
+/* tickers */
 
 .invisibox{
   max-width: 100%;
@@ -75,42 +91,83 @@ body {
     position:relative;
 }
 
+.head{
+  margin-top:2%;
+}
+.foot{
+}
+
+
+#ticker {
+  width: 100%
+  height: auto;
+  animation: ticker 30s linear infinite;
+}
+
+#ticker-two{
+  width: 100%
+  height: auto;
+  animation: ticker-two 30s linear infinite;
+}
+
+/* main content box */
+
+.main-container {
+max-width: 100%;
+overflow: hidden;
+margin-top: 2%;
+padding-bottom:0;
+display: block;
+position:relative;
+background-color: transparent;
+cursor: url("https://gamepedia.cursecdn.com/fallout_gamepedia/9/97/Fo1_Molotov_Cocktail.png?version=6d50619be0e85dcf9751a51bc152b1d8"), auto;
+}
+
+/* nav */
 
 .text{
   font-family:Pixtur, UnifrakturMaguntia; 
   font-size: 2.2rem;
   text-shadow: 0 0 3px #FF0000;
-
-}
-
-li{
   text-align: center;
-  padding: 40px;
+
 }
 
-ul{
-  list-style: none;
-  padding: 0;
-  max-width: 200px;
-}
-
-.nav-wrap{
-  max-width: 20%;
-  float: right;
-  margin-right: 30px;
-  clear: both;
-  overflow: auto;
-}
-
-
- .nav{
+.nav{
   font-family: Pixtur, UnifrakturMaguntia; 
   font-size:1.5rem;
   color:#75B6FF;
   text-shadow: 0 0 1em blue, 0 0 0.2em blue;
   position: relative;
   z-index: 10px;
+  text-align:center;
 }
+
+li{
+  text-align:center;
+  padding-bottom:250%;
+  padding-top:20%;
+  margin-left: 15%;
+}
+
+ul{
+  list-style: none;
+  max-width: 20%;
+  margin-top: 20%;
+  margin-right: 25%;
+  clear: both;
+
+}
+
+.nav-wrap{
+  max-width: 35%;
+  float: right;
+  clear: both;
+  overflow: hidden;
+  padding: 0;
+}
+
+/* buttons */
 
 #buttonAbout:hover,
 #buttonAbout:focus {
@@ -132,27 +189,7 @@ ul{
   cursor: pointer;
 }
 
-
-#ticker {
-  width: 100%
-  height: auto;
-  animation: ticker 30s linear infinite;
-}
-
-#ticker-two{
-  width: 100%
-  height: auto;
-  animation: ticker-two 30s linear infinite;
-}
-
-.main-container {
-max-width: 100%;
-padding: 2% 0;
-overflow: hidden;
-display: block;
-position:relative;
-cursor: url("https://gamepedia.cursecdn.com/fallout_gamepedia/9/97/Fo1_Molotov_Cocktail.png?version=6d50619be0e85dcf9751a51bc152b1d8"), auto;
-}
+/* graphix */
 
 .car{
 box-sizing: border-box; 
@@ -178,6 +215,7 @@ overflow: hidden;
 display: inline-block;
 position: absolute;
 max-width:15%;
+height:auto;
 bottom: 20px;
 right: 80px;
 
@@ -187,6 +225,7 @@ right: 80px;
 overflow: hidden;
 display: inline-block;
 position: absolute;
+height:auto;
 max-width: 15%;
 bottom: 20px;
 left: 80px;
@@ -209,15 +248,18 @@ margin-right: auto;
 
 }
 
+/* modal windows */
+
 h1{
   font-family: 'Druk Wide', Messapia, sans-serif;
   line-height: 1.2;
   text-shadow: 2px 2px 5px red;
-
+  word-wrap: break-word;
+  /*text-align: center;*/
 }
+
 h5{
   font-style: italic;
-
   }
 
 p {
@@ -231,8 +273,6 @@ p {
   overflow: auto;
   z-index: 5; 
   padding-top: 2%; /* Location of the box */
-  /*right: 310px;
-  top: 150px;*/
   max-width:50%;
   max-height:60%;
   overflow:scroll;
@@ -240,13 +280,13 @@ p {
   margin-top: 7%;
   border-radius: 20px;
   background-color:rgba(0,0,0); /* Fallback color */
- background-color: rgba(0,0,0,0.4);
+  background-color: rgba(0,0,0,0.4);
 }
 .modal-content{
   background-color: rgba(254,251,251,0.7);
-  margin: auto;
-  padding:30px;
-  width: 80%;
+  margin: 5%;
+  padding: 5%;
+  width: 90%;
   font-family: 'Neue Machina';
   font-size: 1rem;
   line-height: 2;
@@ -255,18 +295,18 @@ p {
 }
 
 #resourcePadBasic{
-  margin-top: 2px;
-  margin-left: 5px;
-  margin-right: 5px;
-  max-width: 100%
-  max-height: 90%;
+  background-color: rgba(254,251,251,0.7);
+  margin: 5%;
+  padding: 5%;
+  width: 90%;
+
 }
 
 .readingGroup{
   background-color: rgba(254,251,251,0.7);
-  margin: auto;
-  padding:30px;
-  max-width: 80%;
+  margin: 5%;
+  padding:5%;
+  width: 90%;
   font-family: 'Neue Machina';
   font-size: 1rem;
   line-height: 2;
@@ -291,27 +331,29 @@ p {
   cursor: pointer;
 }
 
+/* media queries */
+
 @media screen and (max-width: 570px){
   .car{
-    margin: 50% 20%;
+ margin: 50% 20%;
   }
   .nav{
-    font-size:0.5rem;
+    font-size:0.8rem;
   }
 
   .nav-wrap{
     margin-top: 30%;
-    margin-right:3%;
+    padding-left:30%: 
   }
 
   ul{
-  margin:50% 2%;
+  margin:25% 20%;
 
   }
 
   li{
     margin:1px;
-    padding: 10px;
+    padding-bottom:30px;
   }
   
 
@@ -337,11 +379,15 @@ p {
     height:auto;
   }
   .text{
-    font-size:1rem;
+    font-size:1.5rem;
   }
 
     .modal{
     margin-top:15%;
+    max-width: 80%;
+    max-height: 70%;
+    margin-left: 10%;
+
   }
 
   .modal-content{
@@ -352,5 +398,14 @@ p {
     font-size: 0.8rem;
   }
 
+  h1{
+    font-size:1rem;
+  }
+  .main-container{
+    margin-top:5%;
+  }
+  .head{
+    margin-top: 10%;
+  }
 }
  
