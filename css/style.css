@@ -1,22 +1,22 @@
    /* fonts */
 
    @font-face{
-    font-family: Pixtur;
-    src: url("./ assets/fonts/Pixtur.otf");
+    font-family: 'Pixtur';
+    src: url('../../fonts/Pixtur.otf');
    }
 
    @font-face{
     font-family: 'Neue Machina';
-    src: url("./assets/fonts/NeueMachina-Regular.otf");
+    src: url('../../fonts/NeueMachina-Regular.otf');
    }
 @font-face{
   font-family: 'Druk Wide';
-  src: url("./assets/fonts/Druk-Wide-Medium.otf");
+  src: url('../../fonts/Druk-Wide-Medium.otf');
 }
 
 @font-face{
-  font-family: Messapia;
-  src: url("./assets/fonts/Messapia-Bold.otf");
+  font-family: 'Messapia';
+  src: url('../../fonts/Messapia-Bold.otf');
 }
 
 /* latin */
@@ -64,8 +64,8 @@ height: 100%;
 
 body {
   font-size: 10px;
-  background-image:repeating-radial-gradient(red, yellow 10%);
-  animation: bggradient 10s linear infinite;
+ background-image:repeating-radial-gradient(red, yellow 10%);
+  animation: bggradient 10s linear infinite; 
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -133,8 +133,6 @@ cursor: url("https://gamepedia.cursecdn.com/fallout_gamepedia/9/97/Fo1_Molotov_C
 
 /* nav */
 
-
-
 .nav{
   font-family: Pixtur, UnifrakturMaguntia; 
   font-size:1.5rem;
@@ -148,12 +146,13 @@ cursor: url("https://gamepedia.cursecdn.com/fallout_gamepedia/9/97/Fo1_Molotov_C
   right:3%;
   float: right;
   overflow: hidden;
+  background-image: url('../assets/hmm-1.png');
+  background:no-repeat;
 }
 
 li{
   text-align:center;
   padding-bottom:50%;
-  box-sizing: border-box;
   margin-top: 10%;
 }
 
@@ -162,7 +161,6 @@ ul{
   max-width: 100%;
   margin: 10%;
   clear: both;
-
 }
 
 
