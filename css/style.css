@@ -29,6 +29,7 @@
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
+/* background */
 *,
 *::before,
 *::after {
@@ -97,6 +98,13 @@ body {
 .foot{
 }
 
+.text{
+  font-family:Pixtur, UnifrakturMaguntia; 
+  font-size: 2.2rem;
+  text-shadow: 0 0 3px #FF0000;
+  text-align: center;
+}
+
 
 #ticker {
   width: 100%
@@ -125,13 +133,7 @@ cursor: url("https://gamepedia.cursecdn.com/fallout_gamepedia/9/97/Fo1_Molotov_C
 
 /* nav */
 
-.text{
-  font-family:Pixtur, UnifrakturMaguntia; 
-  font-size: 2.2rem;
-  text-shadow: 0 0 3px #FF0000;
-  text-align: center;
 
-}
 
 .nav{
   font-family: Pixtur, UnifrakturMaguntia; 
@@ -141,31 +143,28 @@ cursor: url("https://gamepedia.cursecdn.com/fallout_gamepedia/9/97/Fo1_Molotov_C
   position: relative;
   z-index: 10px;
   text-align:center;
+  max-width: 20%;
+  top:58px;
+  right:3%;
+  float: right;
+  overflow: hidden;
 }
 
 li{
   text-align:center;
-  padding-bottom:250%;
-  padding-top:20%;
-  margin-left: 15%;
+  padding-bottom:50%;
+  box-sizing: border-box;
+  margin-top: 10%;
 }
 
 ul{
   list-style: none;
-  max-width: 20%;
-  margin-top: 20%;
-  margin-right: 25%;
+  max-width: 100%;
+  margin: 10%;
   clear: both;
 
 }
 
-.nav-wrap{
-  max-width: 35%;
-  float: right;
-  clear: both;
-  overflow: hidden;
-  padding: 0;
-}
 
 /* buttons */
 
@@ -199,6 +198,7 @@ max-width: 60%;
 height:auto;
 margin: 2% 20%;
 position: relative;
+padding: 0;
 
 }
 
@@ -337,17 +337,15 @@ p {
   .car{
  margin: 50% 20%;
   }
+
   .nav{
     font-size:0.8rem;
-  }
-
-  .nav-wrap{
-    margin-top: 30%;
-    padding-left:30%: 
+    top:80px;
+    max-width: 30%;
   }
 
   ul{
-  margin:25% 20%;
+  margin:25% 5%;
 
   }
 
@@ -358,7 +356,7 @@ p {
   
 
   .wire{
-    right:20px;
+    right:30px;
     bottom:0;
     margin-bottom:50%
   }
@@ -403,9 +401,13 @@ p {
   }
   .main-container{
     margin-top:5%;
+    max-height: 50%;
   }
   .head{
     margin-top: 10%;
+  }
+  .foot{
+    margin-bottom: 30%;
   }
 }
  
