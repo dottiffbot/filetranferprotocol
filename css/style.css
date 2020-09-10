@@ -2,21 +2,21 @@
 
    @font-face{
     font-family: 'Pixtur';
-    src: url('../../fonts/Pixtur.otf');
+    src: url('../assets/fonts/Pixtur.otf');
    }
 
    @font-face{
     font-family: 'Neue Machina';
-    src: url('../../fonts/NeueMachina-Regular.otf');
+    src: url('../assets/fonts/NeueMachina-Regular.otf');
    }
 @font-face{
   font-family: 'Druk Wide';
-  src: url('../../fonts/Druk-Wide-Medium.otf');
+  src: url('../assets/fonts/Druk-Wide-Medium.otf');
 }
 
 @font-face{
   font-family: 'Messapia';
-  src: url('../../fonts/Messapia-Bold.otf');
+  src: url('../assets/fonts/Messapia-Bold.otf');
 }
 
 /* latin */
@@ -107,13 +107,13 @@ body {
 
 
 #ticker {
-  width: 100%
+  width: 100%;
   height: auto;
   animation: ticker 30s linear infinite;
 }
 
 #ticker-two{
-  width: 100%
+  width: 100%;
   height: auto;
   animation: ticker-two 30s linear infinite;
 }
@@ -147,7 +147,9 @@ cursor: url("https://gamepedia.cursecdn.com/fallout_gamepedia/9/97/Fo1_Molotov_C
   float: right;
   overflow: hidden;
   background-image: url('../assets/hmm-1.png');
-  background:no-repeat;
+  background-size: 90px 400px;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 li{
@@ -208,26 +210,23 @@ margin-right: auto;
 height: auto;
 }
 
-.wire{
-overflow: hidden;
-display: inline-block;
-position: absolute;
-max-width:15%;
-height:auto;
-bottom: 20px;
-right: 80px;
-
-}
-
-.wire2{
-overflow: hidden;
-display: inline-block;
-position: absolute;
-height:auto;
-max-width: 15%;
-bottom: 20px;
-left: 80px;
-
+.wire {
+  font-family: Pixtur, UnifrakturMaguntia; 
+  font-size:1.5rem;
+  color:#75B6FF;
+  text-shadow: 0 0 1em blue, 0 0 0.2em blue;
+  position: relative;
+  z-index: 10px;
+  text-align:center;
+  max-width: 20%;
+  top:58px;
+  left:3%;
+  float: left;
+  overflow: hidden;
+  background-image: url('../assets/hmm-1.png');
+  background-size: 90px 400px;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .wire img{
@@ -235,15 +234,6 @@ max-width: 100%;
 display: block;
 margin-left: auto;
 margin-right: auto;
-
-}
-
-.wire2 img{
-max-width: 100%;
-display: block;
-margin-left: auto;
-margin-right: auto;
-
 }
 
 /* modal windows */
