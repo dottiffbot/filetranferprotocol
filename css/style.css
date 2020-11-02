@@ -64,7 +64,7 @@ height: 100%;
 
 body {
   font-size: 10px;
- background-image:repeating-radial-gradient(red, yellow 10%);
+  background-image:repeating-radial-gradient(red, yellow 10%);
   animation: bggradient 10s linear infinite; 
   background-repeat: no-repeat;
   background-position: center;
@@ -96,6 +96,7 @@ body {
   margin-top:2%;
 }
 .foot{
+
 }
 
 .text{
@@ -107,15 +108,15 @@ body {
 
 
 #ticker {
-  width: 100%;
   height: auto;
   animation: ticker 30s linear infinite;
+  grid-area: 1 / 1 / 2 / 2;
 }
 
 #ticker-two{
-  width: 100%;
   height: auto;
   animation: ticker-two 30s linear infinite;
+  grid-area: 3 / 1 / 4 / 2;
 }
 
 /* main content box */
@@ -125,7 +126,9 @@ max-width: 100%;
 overflow: hidden;
 margin-top: 2%;
 padding-bottom:0;
-display: block;
+display: grid;
+place-items: center;
+grid-template-columns: repeat(3, 1fr);
 position:relative;
 background-color: transparent;
 cursor: url("https://gamepedia.cursecdn.com/fallout_gamepedia/9/97/Fo1_Molotov_Cocktail.png?version=6d50619be0e85dcf9751a51bc152b1d8"), auto;
@@ -133,36 +136,23 @@ cursor: url("https://gamepedia.cursecdn.com/fallout_gamepedia/9/97/Fo1_Molotov_C
 
 /* nav */
 
-.nav{
+li{
   font-family: Pixtur, UnifrakturMaguntia; 
   font-size:1.5rem;
   color:#75B6FF;
   text-shadow: 0 0 1em blue, 0 0 0.2em blue;
-  position: relative;
-  z-index: 10px;
   text-align:center;
-  max-width: 20%;
-  top:58px;
-  right:3%;
-  float: right;
-  overflow: hidden;
-  background-image: url('../assets/hmm-1.png');
-  background-size: 90px 400px;
-  background-repeat: no-repeat;
-  background-position: center;
-}
+  margin: 5rem;
 
-li{
-  text-align:center;
-  padding-bottom:50%;
-  margin-top: 10%;
 }
 
 ul{
   list-style: none;
   max-width: 100%;
-  margin: 10%;
-  clear: both;
+  z-index: 1px;
+  position: absolute;
+   grid-area: 1 / 3 / 2 / 4;
+
 }
 
 
@@ -188,18 +178,19 @@ ul{
   cursor: pointer;
 }
 
+
+
 /* graphix */
 
 .car{
-box-sizing: border-box; 
-overflow: hidden;
 background-color:transparent;
 max-width: 60%;
+position: relative;
 height:auto;
 margin: 2% 20%;
-position: relative;
 padding: 0;
-
+display: inline-block;
+grid-area: 1 / 1 / 4 / 4;
 }
 
 .car img{
@@ -211,29 +202,24 @@ height: auto;
 }
 
 .wire {
-  font-family: Pixtur, UnifrakturMaguntia; 
-  font-size:1.5rem;
-  color:#75B6FF;
-  text-shadow: 0 0 1em blue, 0 0 0.2em blue;
-  position: relative;
-  z-index: 10px;
-  text-align:center;
-  max-width: 20%;
-  top:58px;
-  left:3%;
-  float: left;
-  overflow: hidden;
-  background-image: url('../assets/hmm-1.png');
-  background-size: 90px 400px;
-  background-repeat: no-repeat;
-  background-position: center;
+    display: inline-block;
+    position: relative;
+    grid-area: 1 / 3 / 2 / 4;
+    z-index: -1;
+
+}
+
+.wire2{
+    position: relative;
+    display: inline-block;
+    grid-area: 1 / 1 / 2 / 2;
+    align-self: start;
 }
 
 .wire img{
 max-width: 100%;
-display: block;
-margin-left: auto;
-margin-right: auto;
+display: inline-block;
+margin: 0 auto;
 }
 
 /* modal windows */
@@ -264,8 +250,6 @@ p {
   max-width:50%;
   max-height:60%;
   overflow:scroll;
-  margin-left: 25%;
-  margin-top: 7%;
   border-radius: 20px;
   background-color:rgba(0,0,0); /* Fallback color */
   background-color: rgba(0,0,0,0.4);
@@ -325,48 +309,34 @@ p {
   .car{
  margin: 50% 20%;
   }
-
-  .nav{
-    font-size:0.8rem;
-    top:80px;
-    max-width: 30%;
-  }
-
-  ul{
-  margin:25% 5%;
-
-  }
-
-  li{
-    margin:1px;
-    padding-bottom:30px;
-  }
-  
-
-  .wire{
-    right:30px;
-    bottom:0;
-    margin-bottom:50%
-  }
-
-  .wire2{
-    left:20px;
-    bottom: 0;
-    margin-bottom:50%;
-  }
-
   .wire img{
     max-width: 50%;
     height:auto;
+  }
+
+  .wire{
+    left: 30px;
   }
 
   .wire2 img{
     max-width: 50%;
     height:auto;
   }
+
   .text{
     font-size:1.5rem;
   }
+
+  li{
+    font-size: 1rem;
+    
+
+      }
+
+      ul{
+        right: 40px;
+
+      }
 
     .modal{
     margin-top:15%;

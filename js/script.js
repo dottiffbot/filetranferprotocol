@@ -6,7 +6,7 @@ document.getElementById('caronfire');
  regCopCar.onclick = () =>{regCopCar.src = carOnFire;
  }
  // yes, this code is from w3schools
-var modal = document.getElementById("myModal");
+var modal = document.getElementById("modalOne");
 
 // Get the button that opens the modal
 var btn = document.querySelectorAll("li.modal-button");
