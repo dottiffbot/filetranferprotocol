@@ -271,6 +271,7 @@ p {
 
 }
 
+
 .readingGroup{
   background-color: rgba(254,251,251,0.7);
   margin: 5%;
@@ -389,6 +390,13 @@ right: 3px;
     margin-top: 10%;
   }
   .foot{
+
+  }
+iframe{
+width: 400px;
+  }
+  .resourcePadBasic{
+    overflow: scroll;
 
   }
 }
